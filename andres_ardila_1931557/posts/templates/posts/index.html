@@ -7,7 +7,7 @@
     <!-- Retrieve all the post from database-->		
                                                             <!-- Display the post title -->
 {% for post in posts %}
-    <li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.post_title}}</a></li>
+    <li class="collection-item"><a href="{% url 'posts:details' post.id %}">{{post.post_title}}</a></li>
 {% endfor %}
     <!-- -->
 </ul>
